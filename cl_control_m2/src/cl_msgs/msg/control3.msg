@@ -1,0 +1,24 @@
+uint16 LF_Rpm
+uint16 RF_Rpm
+uint16 LR_Rpm
+uint16 RR_Rpm
+uint8 LF_Motor_Gear
+uint8 RF_Motor_Gear
+uint8 LR_Motor_Gear
+uint8 RR_Motor_Gear
+uint8 LF_Motor_En
+uint8 RF_Motor_En
+uint8 LR_Motor_En
+uint8 RR_Motor_En
+uint8 LF_Motor_Brake
+uint8 RF_Motor_Brake
+uint8 LR_Motor_Brake
+uint8 RR_Motor_Brake
+
+float32 Target_Brk_Press
+uint16 Target_Steer_F
+uint8 Target_Steer_F_En
+uint16 Target_Steer_R
+uint8 Target_Steer_R_En
+uint8 EPB_Switch
+uint8 Target_Mode

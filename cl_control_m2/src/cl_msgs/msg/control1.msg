@@ -1,0 +1,16 @@
+uint16 LF_Rpm
+uint16 RF_Rpm
+uint16 LR_Rpm
+uint16 RR_Rpm
+uint8 LF_Motor_Gear
+uint8 RF_Motor_Gear
+uint8 LR_Motor_Gear
+uint8 RR_Motor_Gear
+uint8 LF_Motor_En
+uint8 RF_Motor_En
+uint8 LR_Motor_En
+uint8 RR_Motor_En
+uint8 LF_Motor_Brake
+uint8 RF_Motor_Brake
+uint8 LR_Motor_Brake
+uint8 RR_Motor_Brake

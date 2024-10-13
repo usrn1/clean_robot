@@ -1,0 +1,8 @@
+prefix=/home/liang/cl_rootws/cl_control_m2/devel
+
+Name: TXRX_ST15
+Description: Description of TXRX_ST15
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

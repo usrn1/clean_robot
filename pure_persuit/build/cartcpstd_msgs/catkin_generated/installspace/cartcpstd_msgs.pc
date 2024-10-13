@@ -1,0 +1,8 @@
+prefix=/home/liang/cl_rootws/pure_persuit/install
+
+Name: cartcpstd_msgs
+Description: Description of cartcpstd_msgs
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

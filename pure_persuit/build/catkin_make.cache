@@ -1,0 +1,2 @@
+cartcpstd_msgs:pure_persuit:serial_driver:styx_msgs:waypoint_loader:waypoint_updater
+-DCATKIN_DEVEL_PREFIX=/home/liang/cl_rootws/pure_persuit/devel -DCMAKE_INSTALL_PREFIX=/home/liang/cl_rootws/pure_persuit/install -G Unix Makefiles

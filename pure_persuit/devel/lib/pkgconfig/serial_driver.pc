@@ -1,0 +1,8 @@
+prefix=/home/liang/cl_rootws/pure_persuit/devel
+
+Name: serial_driver
+Description: Description of serial_driver
+Version: 0.0.0
+Cflags: -I/home/liang/cl_rootws/pure_persuit/devel/include -I/home/liang/cl_rootws/pure_persuit/src/serial_driver/include
+Libs: -L${prefix}/lib -lserial_driver
+Requires: roscpp rospy std_msgs

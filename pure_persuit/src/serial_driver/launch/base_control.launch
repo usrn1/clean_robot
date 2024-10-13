@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+        <arg name="car_type" default="$(env CAR_TYPE)"/>
+        <group if="$(eval car_type == 'followone')">
+            <node pkg="serial_driver" type="base_controller" name="followonebase_controller" output="screen" />
+        </group>
+        <group if="$(eval car_type == 'followtwo')">
+            <node pkg="serial_driver" type="base_controller" name="followtwobase_controller" output="screen" />
+        </group>
+        <group if="$(eval car_type == 'robot')">
+            <node pkg="serial_driver" type="base_controller" name="robotbase_controller" output="screen" />
+        </group>
+</launch>

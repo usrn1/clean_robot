@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<launch>
+    <arg name="car_type" default="$(env CAR_TYPE)"/>
+    <group if="$(eval car_type == 'bache1')">
+        <node pkg="serial_driver" type="copyremove_file.py" name="bache1copyremove_file" output="screen">
+            <param name="path1" value="$(find serial_driver)/RS232_C.txt" />
+            <param name="path2" value="$(find serial_driver)/path/RS232_C.txt" />
+        </node>
+    </group>
+    <group if="$(eval car_type == 'bache2')">
+        <node pkg="serial_driver" type="copyremove_file.py" name="bache2copyremove_file" output="screen">
+            <param name="path1" value="$(find serial_driver)/RS232_C.txt" />
+            <param name="path2" value="$(find serial_driver)/path/RS232_C.txt" />
+        </node>
+    </group>
+    <group if="$(eval car_type == 'maincar')">
+        <node pkg="serial_driver" type="copyremove_file.py" name="maincarcopyremove_file" output="screen">
+            <param name="path1" value="$(find serial_driver)/RS232_C.txt" />
+            <param name="path2" value="$(find serial_driver)/path/RS232_C.txt" />
+        </node>
+    </group>
+    <!-- <include file="$(find waypoint_loader)/launch/wayFile_parse.launch"/> -->
+</launch>

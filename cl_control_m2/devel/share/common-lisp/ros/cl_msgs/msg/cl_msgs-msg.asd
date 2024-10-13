@@ -1,0 +1,21 @@
+
+(cl:in-package :asdf)
+
+(defsystem "cl_msgs-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils )
+  :components ((:file "_package")
+    (:file "VCU_info_1" :depends-on ("_package_VCU_info_1"))
+    (:file "_package_VCU_info_1" :depends-on ("_package"))
+    (:file "VCU_info_2" :depends-on ("_package_VCU_info_2"))
+    (:file "_package_VCU_info_2" :depends-on ("_package"))
+    (:file "VCU_info_3" :depends-on ("_package_VCU_info_3"))
+    (:file "_package_VCU_info_3" :depends-on ("_package"))
+    (:file "control1" :depends-on ("_package_control1"))
+    (:file "_package_control1" :depends-on ("_package"))
+    (:file "control2" :depends-on ("_package_control2"))
+    (:file "_package_control2" :depends-on ("_package"))
+    (:file "control3" :depends-on ("_package_control3"))
+    (:file "_package_control3" :depends-on ("_package"))
+    (:file "robot_state" :depends-on ("_package_robot_state"))
+    (:file "_package_robot_state" :depends-on ("_package"))
+  ))

@@ -1,0 +1,36 @@
+<launch>
+  <arg name="robot_name_2" default="maincar" /> 
+  <arg name="car_type"       default="$(env CAR_TYPE)" /><!--判断车辆的类型-->
+  <group if="$(eval car_type == 'maincar')">
+  <node pkg="waypoint_updater" type="static_tf.py" name="maincar_base_link_axis1" output="screen"><!--发布axis1-->
+    <param name="leader_robot_name" value="$(arg robot_name_2)" />
+    <param name="target_name" value="axis1" />
+    <param name="theta" value="$(eval 3.14159/6)"/>
+  </node>
+  <node pkg="waypoint_updater" type="static_tf.py" name="maincar_base_link_axis2" output="screen"><!--发布axis2-->
+    <param name="leader_robot_name" value="$(arg robot_name_2)" />
+    <param name="target_name" value="axis2" />
+    <param name="theta" value="$(eval -3.14159/6)"/>
+  </node>
+  <node pkg="waypoint_updater" type="static_tf.py" name="maincar_base_link_axis3" output="screen"><!--发布axis3-->
+    <param name="leader_robot_name" value="$(arg robot_name_2)" />
+    <param name="target_name" value="axis3" />
+    <param name="theta" value="$(eval 3.14159*0.75)"/>
+  </node>
+  <node pkg="waypoint_updater" type="static_tf.py" name="maincar_base_link_axis4" output="screen"><!--发布axis4-->
+    <param name="leader_robot_name" value="$(arg robot_name_2)" />
+    <param name="target_name" value="axis4" />
+    <param name="theta" value="$(eval -3.14159*0.75)"/>
+  </node>
+    <node pkg="waypoint_updater" type="static_tf.py" name="maincar_base_link_axis5" output="screen"><!--发布axis5-->
+    <param name="leader_robot_name" value="$(arg robot_name_2)" />
+    <param name="target_name" value="axis5" />
+    <param name="theta" value="$(eval 3.14159)"/>
+  </node>
+    <node pkg="waypoint_updater" type="static_tf.py" name="maincar_base_link_axis6" output="screen"><!--发布axis6-->
+    <param name="leader_robot_name" value="$(arg robot_name_2)" />
+    <param name="target_name" value="axis6" />
+    <param name="theta" value="$(eval 3.14159)"/>
+  </node>
+  </group>
+</launch>

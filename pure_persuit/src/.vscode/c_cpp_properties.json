@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/liang/cl123/devel/include/**",
+        "/home/liang/yhs_fr07_pro_oc/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/liang/cl123/src/cartcpstd_msgs/include/**",
+        "/home/liang/yhs_fr07_pro_oc/src/fdilink_ahrs/include/**",
+        "/home/liang/yhs_fr07_pro_oc/src/lsdidar_ws/lslidar_ros/lslidar_driver/include/**",
+        "/home/liang/yhs_fr07_pro_oc/src/lsdidar_ws/pointcloud_to_laserscan/include/**",
+        "/home/liang/cl123/src/serial_driver/include/**",
+        "/home/liang/yhs_fr07_pro_oc/src/yhs_can_control/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

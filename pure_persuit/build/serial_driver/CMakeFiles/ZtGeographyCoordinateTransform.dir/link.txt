@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,-soname,libZtGeographyCoordinateTransform.so -o /home/liang/cl_rootws/pure_persuit/devel/lib/libZtGeographyCoordinateTransform.so CMakeFiles/ZtGeographyCoordinateTransform.dir/src/ZtGeographyCoordinateTransform.cpp.o 

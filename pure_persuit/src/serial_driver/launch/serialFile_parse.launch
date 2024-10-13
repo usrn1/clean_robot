@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<launch>
+    <arg name="car_type" default="$(env CAR_TYPE)"/>
+    <group if="$(eval car_type == 'bache1')">
+        <node pkg="serial_driver" type="serialFile_parse" name="bache1serialFile_parse" output="screen">
+    	    <param name="path1" value="$(find serial_driver)/RS232_C.txt" />
+            <param name="path2" value="$(find waypoint_loader)/waypoints/waypoints.csv" /> 
+        </node>
+    </group>
+    <group if="$(eval car_type == 'bache2')">
+        <node pkg="serial_driver" type="serialFile_parse" name="bache2serialFile_parse" output="screen">
+    	    <param name="path1" value="$(find serial_driver)/RS232_C.txt" />
+            <param name="path2" value="$(find waypoint_loader)/waypoints/waypoints.csv" /> 
+        </node>
+    </group>
+    <group if="$(eval car_type == 'maincar')">
+        <node pkg="serial_driver" type="serialFile_parse" name="maincarserialFile_parse" output="screen">
+    	    <param name="path1" value="$(find serial_driver)/path/RS232_C.txt" />
+            <param name="path2" value="$(find waypoint_loader)/waypoints/waypoints.csv" /> 
+        </node>
+    </group>
+    <include file="$(find waypoint_loader)/launch/wayFile_parse.launch"/>
+</launch>

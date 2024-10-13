@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+<arg name="car_type"       default="$(env CAR_TYPE)" /><!--判断车辆的类型-->
+    <group if="$(eval car_type == 'bache1')"><!--若为bache1,将正向路径信息发布出来-->
+    <node pkg="waypoint_loader" type="waypoint_loader.py" name="bache1_waypoint_loader">
+        <param name="path" value="$(find waypoint_loader)/waypoints/waypoints.csv" /><!--正向轨迹文件名称-->
+    </node>
+    </group>
+    <group if="$(eval car_type == 'bache2')"><!--若为bache2,将正向路径信息发布出来-->
+    <node pkg="waypoint_loader" type="waypoint_loader.py" name="bache2_waypoint_loader">
+        <param name="path" value="$(find waypoint_loader)/waypoints/waypoints.csv" /><!--正向轨迹文件名称-->
+    </node>
+    </group>
+    <group if="$(eval car_type == 'maincar')"><!--若为maincar,将正向路径信息发布出来-->
+    <node pkg="waypoint_loader" type="waypoint_loader.py" name="maincar_waypoint_loader">
+        <param name="path" value="$(find waypoint_loader)/waypoints/waypoints.csv" /><!--正向轨迹文件名称-->
+        <param name = "velocity" value = "6"/> 
+    </node>
+    </group>
+</launch>

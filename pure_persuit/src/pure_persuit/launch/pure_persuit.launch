@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<launch>
+<arg name="car_type"       default="$(env CAR_TYPE)" /><!--判断车辆的类型-->
+    <group if="$(eval car_type == 'bache1')"><!--若为bache1,启动车辆循迹程序-->
+    <node name="bache1_pure_persuit" pkg="pure_persuit" type="pure_persuit.py" respawn="true" output="screen"/>
+    <node name="bache1_vehicle_pose_and_velocity_updater" pkg="waypoint_updater" type="vehicle_pose_and_velocity_updater.py" respawn="true" output="screen"/>
+    </group>
+    <group if="$(eval car_type == 'bache2')"><!--若为bache2,启动车辆循迹程序-->
+    <node name="bache2_pure_persuit" pkg="pure_persuit" type="pure_persuit.py" respawn="true" output="screen"/>
+    <node name="bache2_vehicle_pose_and_velocity_updater" pkg="waypoint_updater" type="vehicle_pose_and_velocity_updater.py" respawn="true" output="screen"/>
+    </group>
+    <group if="$(eval car_type == 'maincar')"><!--若为maincar,启动车辆循迹程序-->
+    <node name="maincar_pure_persuit" pkg="pure_persuit" type="pure_persuit.py" respawn="true" output="screen"/>
+    <node name="maincar_vehicle_pose_and_velocity_updater" pkg="waypoint_updater" type="vehicle_pose_and_velocity_updater.py" respawn="true" output="screen"/>
+    </group>
+</launch>

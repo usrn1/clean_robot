@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<launch>
+    <param name="Kp_l" value="1.5"/>
+    <param name="Ki_l" value="0.8"/>
+    <param name="Kd_l" value="0.3"/>
+    <node pkg="serial_driver" type="haitun_base_control" name="haitun_base_control" output="screen">
+        <param name="throttle_param" value="0.15707963" />
+        <param name="steer_param" value="360.59158402" />
+        <param name="Pid_speed_param" value="0.55707963"/>
+    </node>
+</launch>

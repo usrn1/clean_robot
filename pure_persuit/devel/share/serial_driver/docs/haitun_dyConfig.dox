@@ -1,0 +1,7 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~throttle_param" : \b [double] 油门参数 min: 0.0, default: 0.157079632679, max: 1.57079632679
+- \b "~steer_param" : \b [double] 方向盘参数 min: 0.0, default: 200.0, max: 250.0
+

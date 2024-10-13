@@ -1,0 +1,19 @@
+
+<launch>
+<arg name="car_type"       default="$(env CAR_TYPE)" />
+    <group if="$(eval car_type == 'bache1')">
+            <node pkg="serial_driver" type="serial_TXRX" name="bache1_serial_TXRX" output="screen">
+                <param name="path" value="$(find serial_driver)/path/RS232_C.txt" />
+            </node>
+    </group>
+        <group if="$(eval car_type == 'bache2')">
+            <node pkg="serial_driver" type="serial_TXRX" name="bache2_serial_TXRX" output="screen">
+                <param name="path" value="$(find serial_driver)/path/RS232_C.txt" />
+            </node>
+    </group>
+    <group if="$(eval car_type == 'maincar')">
+        <node pkg="serial_driver" type="serial_TXRX" name="maincar_serial_TXRX" output="screen">
+                <param name="path" value="$(find serial_driver)/path/RS232_C.txt" />
+        </node>
+    </group>
+</launch>

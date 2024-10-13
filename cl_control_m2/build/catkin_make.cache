@@ -1,0 +1,2 @@
+cl_control:cl_msgs:txrx_st15
+-DCATKIN_DEVEL_PREFIX=/home/liang/cl_rootws/cl_control_m2/devel -DCMAKE_INSTALL_PREFIX=/home/liang/cl_rootws/cl_control_m2/install -G Unix Makefiles

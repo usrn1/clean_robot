@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<launch>
+<arg name="car_type"       default="$(env CAR_TYPE)" />
+    <group if="$(eval car_type == 'bache1')">
+    <node pkg="waypoint_loader" type="waypoint_loader.py" name="bache1_waypoint_loader">
+        <param name="path" value="$(find waypoint_loader)/waypoints/waypoints.csv" />
+        <param name="velocity" value="3" />
+    </node>
+    <node pkg="waypoint_updater" type="waypoint_updater.py" name="bache1_waypoint_updater" />
+    </group>
+    <group if="$(eval car_type == 'bache2')">
+    <node pkg="waypoint_loader" type="waypoint_loader.py" name="bache2_waypoint_loader">
+        <param name="path" value="$(find waypoint_loader)/waypoints/waypoints.csv" />
+        <param name="velocity" value="3" />
+    </node>
+    <node pkg="waypoint_updater" type="waypoint_updater.py" name="bache2_waypoint_updater" />
+    </group>
+    <group if="$(eval car_type == 'maincar')">
+    <node pkg="waypoint_loader" type="waypoint_loader.py" name="maincar_waypoint_loader">
+        <param name="path" value="$(find waypoint_loader)/waypoints/waypoints.csv" />
+        <param name="velocity" value="1" />
+    </node>
+    <node pkg="waypoint_updater" type="waypoint_updater.py" name="maincar_waypoint_updater" />
+    </group>
+</launch>

@@ -1,0 +1,2 @@
+set(cl_msgs_MESSAGE_FILES "/home/liang/cl_rootws/cl_control_m2/src/cl_msgs/msg/control1.msg;/home/liang/cl_rootws/cl_control_m2/src/cl_msgs/msg/control2.msg;/home/liang/cl_rootws/cl_control_m2/src/cl_msgs/msg/control3.msg;/home/liang/cl_rootws/cl_control_m2/src/cl_msgs/msg/VCU_info_1.msg;/home/liang/cl_rootws/cl_control_m2/src/cl_msgs/msg/VCU_info_2.msg;/home/liang/cl_rootws/cl_control_m2/src/cl_msgs/msg/VCU_info_3.msg;/home/liang/cl_rootws/cl_control_m2/src/cl_msgs/msg/robot_state.msg")
+set(cl_msgs_SERVICE_FILES "")

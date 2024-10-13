@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+<arg name="car_type"       default="$(env CAR_TYPE)" /><!--判断车辆的类型-->
+    <group if="$(eval car_type == 'bache1')"><!--若为bache1,启动由正向轨迹变为反向轨迹的文件-->
+    <node pkg="waypoint_loader" type="wayFile_parse" name="bache1_wayFile_parse">
+    	<param name="path1" value="$(find waypoint_loader)/waypoints/waypoints.csv" /><!--正向轨迹文件名称-->
+        <param name="path2" value="$(find waypoint_loader)/waypoints/waypoints_invert.csv" /><!--反向轨迹名称-->
+    </node>
+    </group>
+    <group if="$(eval car_type == 'bache2')"><!--若为bache2,启动由正向轨迹变为反向轨迹的文件-->
+    <node pkg="waypoint_loader" type="wayFile_parse" name="bache2_wayFile_parse">
+    	<param name="path1" value="$(find waypoint_loader)/waypoints/waypoints.csv" /><!--正向轨迹文件名称-->
+        <param name="path2" value="$(find waypoint_loader)/waypoints/waypoints_invert.csv" /><!--反向轨迹名称-->
+    </node>
+    </group>
+    <group if="$(eval car_type == 'maincar')"><!--若为maincar,启动由正向轨迹变为反向轨迹的文件-->
+    <node pkg="waypoint_loader" type="wayFile_parse" name="maincar_wayFile_parse">
+    	<param name="path1" value="$(find waypoint_loader)/waypoints/waypoints.csv" /><!--正向轨迹文件名称-->
+        <param name="path2" value="$(find waypoint_loader)/waypoints/waypoints_invert.csv" /><!--反向轨迹文件名称-->
+    </node>
+    </group>
+</launch>

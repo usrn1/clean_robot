@@ -1,0 +1,6 @@
+<launch>
+
+    <node pkg="txrx_st15" type="txrx_st15_node" name="txrx_st15_node" output="screen" />
+   
+    <!--  launch-prefix = "gonme-terminal -e"    让节点单独运行在一个独立终端中--> 
+</launch>

@@ -1,0 +1,9 @@
+<!--cl-->
+<launch>
+
+    <node pkg="cl_control" type="cl_control_node" name="cl_control_node" output="screen">
+
+    </node>
+
+</launch>
+

@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/liang/cl_rootws/pure_persuit/devel/lib/python2.7/dist-packages",
+        "/home/liang/cl_rootws/cl_control_m2/devel/lib/python2.7/dist-packages",
+        "/home/liang/yhs_fr07_pro_oc/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/liang/cl_rootws/pure_persuit/devel/lib/python2.7/dist-packages",
+        "/home/liang/cl_rootws/cl_control_m2/devel/lib/python2.7/dist-packages",
+        "/home/liang/yhs_fr07_pro_oc/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ]
+}

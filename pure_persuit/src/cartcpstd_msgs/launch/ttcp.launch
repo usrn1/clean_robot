@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+<arg name="car_type"       default="$(env CAR_TYPE)" />
+    <group if="$(eval car_type == 'bache1')">
+            <node pkg="cartcpstd_msgs" type="tcp" name="bache1_tcp" output="screen" />
+    </group>
+     <group if="$(eval car_type == 'bache2')">
+            <node pkg="cartcpstd_msgs" type="tcp" name="bache2_tcp" output="screen" />
+    </group>
+	<group if="$(eval car_type == 'maincar')">
+            <node pkg="cartcpstd_msgs" type="tcp" name="maincar_tcp" output="screen" />
+    </group>
+
+</launch>

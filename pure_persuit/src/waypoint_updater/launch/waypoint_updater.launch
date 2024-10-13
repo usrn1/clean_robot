@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+<arg name="car_type"       default="$(env CAR_TYPE)" /><!--判断车辆的类型-->
+    <group if="$(eval car_type == 'bache1')"><!--若为bache1,发布车辆后轮位置和局部路径-->
+     <node pkg="waypoint_updater" type="waypoint_updater.py" name="bache1_waypoint_updater" />
+     <node pkg="waypoint_updater" type="vehicle_pose_and_velocity_updater.py" name="bache1_vehicle_pose_and_velocity_updater" />
+    </group>
+    <group if="$(eval car_type == 'bache2')"><!--若为bache1,发布车辆后轮位置和局部路径-->
+     <node pkg="waypoint_updater" type="waypoint_updater.py" name="bache2_waypoint_updater" />
+     <node pkg="waypoint_updater" type="vehicle_pose_and_velocity_updater.py" name="bache2_vehicle_pose_and_velocity_updater" />
+    </group>
+    <group if="$(eval car_type == 'maincar')"><!--若为bache1,发布车辆后轮位置和局部路径-->
+     <node pkg="waypoint_updater" type="waypoint_updater.py" name="maincar_waypoint_updater" />
+     <node pkg="waypoint_updater" type="vehicle_pose_and_velocity_updater.py" name="maincar_vehicle_pose_and_velocity_updater" />
+    </group>
+</launch>

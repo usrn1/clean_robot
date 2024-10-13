@@ -1,0 +1,12 @@
+<launch>
+<arg name="car_type"       default="$(env CAR_TYPE)" /><!--判断车辆的类型-->
+    <group if="$(eval car_type == 'bache1')"><!--若为bache1,发布其坐标-->
+    <node pkg="waypoint_updater" type="transform_publisher.py" name="bache1_transform_publisher" />
+    </group>
+    <group if="$(eval car_type == 'bache2')"><!--若为bache2,发布其坐标-->
+    <node pkg="waypoint_updater" type="transform_publisher.py" name="bache2_transform_publisher" /> 
+    </group>
+    <group if="$(eval car_type == 'maincar')"><!--若为maincar,发布其坐标-->
+    <node pkg="waypoint_updater" type="transform_publisher.py" name="maincar_transform_publisher" /> 
+    </group>
+</launch>

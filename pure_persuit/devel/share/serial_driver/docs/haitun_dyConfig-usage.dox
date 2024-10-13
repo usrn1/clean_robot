@@ -1,0 +1,8 @@
+\subsubsection usage Usage
+\verbatim
+<node name="serial_driver" pkg="serial_driver" type="serial_driver">
+  <param name="throttle_param" type="double" value="0.157079632679" />
+  <param name="steer_param" type="double" value="200.0" />
+</node>
+\endverbatim
+
